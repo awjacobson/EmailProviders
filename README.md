@@ -1,6 +1,8 @@
 
 # EmailProviders
 
+[![Build Status](https://dev.azure.com/awjacobson/awjacobson/_apis/build/status/awjacobson.EmailProviders?branchName=master)](https://dev.azure.com/awjacobson/awjacobson/_build/latest?definitionId=1&branchName=master)
+
 An ASP.Net Core 2.2 implementation of the IEmailSender interface of the Microsoft.AspNetCore.Identity.UI package.  This class library includes implementations for Gmail SMTP and SendGrid.
 
 ## Download
