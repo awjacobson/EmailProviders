@@ -3,6 +3,10 @@
 
 An ASP.Net Core 2.2 implementation of the IEmailSender interface of the Microsoft.AspNetCore.Identity.UI package.  This class library includes implementations for Gmail SMTP and SendGrid.
 
+## Download
+
+Add EmailProviders to your ASP.Net Core project using the [Nuget package](https://www.nuget.org/packages/AWJ.EmailProviders/).
+
 ## Email Templates
 
 Store your client specific, HTML formatted, email templates with keyword replacement in your deployed DLL.  You may easily package these as an embedded resource.  The embedded resources do not require any special read/write authorizations, etc. that you would need if you were to put these files outside the document root on the web server.

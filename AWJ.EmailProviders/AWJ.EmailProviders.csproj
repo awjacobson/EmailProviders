@@ -2,6 +2,14 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageProjectUrl>https://github.com/awjacobson/EmailProviders</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/awjacobson/EmailProviders/blob/master/LICENSE</PackageLicenseUrl>
+    <Copyright>2019 Aaron Jacobson</Copyright>
+    <Description>An ASP.Net Core 2.2 implementation of the IEmailSender interface of the Microsoft.AspNetCore.Identity.UI package</Description>
+    <RepositoryType>Git</RepositoryType>
+    <RepositoryUrl>https://github.com/awjacobson/EmailProviders.git</RepositoryUrl>
+    <PackageTags>ASP.NET Core Email Gmail SMTP SendGrid</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
