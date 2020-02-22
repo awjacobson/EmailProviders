@@ -39,16 +39,14 @@ namespace AWJ.EmailProviders
         /// <summary>
         /// Performs the keyword replacement on the provide email template.
         /// </summary>
-        /// <remarks>
-        /// Values written to the email template are Html encoded.
-        /// </remarks>
         /// <param name="template"></param>
         /// <param name="keyValuePairs"></param>
+        /// <param name="htmlEncode">Indicate to HTML encode or not</param>
         /// <returns></returns>
-        public string Replace(string template, IDictionary<string, string> keyValuePairs)
+        public static string Replace(string template, IDictionary<string, string> keyValuePairs, bool htmlEncode = true)
         {
             return keyValuePairs.Aggregate(template, (current, value) =>
-                current.Replace($"{{{value.Key}}}", HtmlEncoder.Default.Encode(value.Value)));
+                current.Replace($"{{{value.Key}}}", htmlEncode ? HtmlEncoder.Default.Encode(value.Value) : value.Value));
         }
 
         /// <summary>
