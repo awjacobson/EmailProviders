@@ -11,7 +11,7 @@ namespace AWJ.EmailProviders
     public interface IEmailTemplateProvider
     {
         Task<string> GetEmailTemplateAsync(string name);
-        Task<string> GetHtmlMessageAsync(string name, IDictionary<string, string> keyValuePairs);
+        Task<string> GetHtmlMessageAsync(string name, IDictionary<string, string> keyValuePairs, bool htmlEncode = true);
     }
 
     public class EmailTemplateProvider : IEmailTemplateProvider
@@ -60,11 +60,12 @@ namespace AWJ.EmailProviders
         /// <param name="keyValuePairs">
         /// Key/value pairs used for keyword replacement in the email template.
         /// </param>
+        /// <param name="htmlEncode">Indicate to HTML encode or not</param>
         /// <returns></returns>
-        public async Task<string> GetHtmlMessageAsync(string name, IDictionary<string, string> keyValuePairs)
+        public async Task<string> GetHtmlMessageAsync(string name, IDictionary<string, string> keyValuePairs, bool htmlEncode = true)
         {
             var template = await GetEmailTemplateAsync(name);
-            var output = Replace(template, keyValuePairs);
+            var output = Replace(template, keyValuePairs, htmlEncode);
             return output;
         }
     }
