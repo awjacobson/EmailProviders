@@ -10,6 +10,8 @@
     <RepositoryType>Git</RepositoryType>
     <RepositoryUrl>https://github.com/awjacobson/EmailProviders.git</RepositoryUrl>
     <PackageTags>ASP.NET Core Email Gmail SMTP SendGrid</PackageTags>
+    <AssemblyVersion>1.0.1.0</AssemblyVersion>
+    <FileVersion>1.0.1.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
